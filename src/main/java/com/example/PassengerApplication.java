@@ -31,9 +31,7 @@ public class PassengerApplication {
 	@GetMapping("/{PassengerID}")
 	public Passenger getPassengerById(@PathVariable String PassengerID){
 
-		Passenger myPassenger = new Passenger("Mr", "Peter", "1234567891", 24646464554L, 23);
-
-		return myPassenger;
+		return myService.getPassengerById(PassengerID);
 	}
 
 }
