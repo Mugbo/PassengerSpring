@@ -33,6 +33,7 @@ public class PassengerService {
         passengerRepo.deleteById(count);
     }
 
+    //http:localhost:8080/api/passenger/age?age_start=16age_end=60
     public List<Passenger> findPassengerByAgeRange(int age, int age2){
 
         return passengerRepo.findPassengerByAgeRange(age, age2);
