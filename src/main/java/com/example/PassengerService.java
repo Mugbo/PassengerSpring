@@ -23,7 +23,13 @@ public class PassengerService {
 
         return myPassenger;
     }
-    public void savePassanger(Passenger passenger){
+    public void savePassenger(Passenger passenger){
         passengerRepo.save(passenger);
     }
+
+    public Passenger findPassengersByName(String name){
+        return passengerRepo.findPassengersByName(name);
+    }
+
+
 }
