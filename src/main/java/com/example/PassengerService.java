@@ -19,8 +19,11 @@ public class PassengerService {
     }
     public Passenger getPassengerById(@PathVariable String PassengerID){
 
-        Passenger myPassenger = new Passenger("Mr", "Peter", "1234567891", 24646464554L, 23);
+        Passenger myPassenger = new Passenger("Mr", "Peter", "1234567891", 24646464554L, 23, 1L);
 
         return myPassenger;
+    }
+    public void savePassanger(Passenger passenger){
+        passengerRepo.save(passenger);
     }
 }
