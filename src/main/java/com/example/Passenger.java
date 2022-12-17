@@ -1,7 +1,18 @@
 package com.example;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Entity
+@Table
+
+
 public class Passenger {
 
     private String title;
@@ -9,6 +20,9 @@ public class Passenger {
     private String id;
     private long phone;
     private int age;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long count;
 
     public String getTitle() {
         return title;
