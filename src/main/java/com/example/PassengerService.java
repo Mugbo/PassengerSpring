@@ -32,9 +32,8 @@ public class PassengerService {
         return passengerRepo.findPassengersByName(name);
     }
 
-    @DeleteMapping("/delete/{count}")
-    public void deletePassenger(@PathVariable("count") Long count){
-        myService.deletePassanger(count);
+    public void deletePassenger(Long count){
+        passengerRepo.deleteById(count);
     }
 
 }
