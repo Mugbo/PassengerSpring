@@ -1,0 +1,26 @@
+version: '3'
+services:
+  server:
+    image: mugbo/passengerspring
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/org
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    depends_on:
+      - postgres
+    networks:
+      - db
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=org
+    ports:
+      - "5432:5432"
+    networks:
+      - db
+networks:
+  db:
