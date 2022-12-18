@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -24,6 +23,13 @@ public class Passenger {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long count;
 
+    public Passenger(String title, String name, String id, long phone, int age) {
+        setTitle(title);
+        setName(name);
+        setId(id);
+        setPhone(phone);
+        setAge(age);
+    }
     public String getTitle() {
         return title;
     }

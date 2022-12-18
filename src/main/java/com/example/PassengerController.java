@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@SpringBootApplication
 @RequestMapping(path = "api/passenger")
 public class PassengerController {
 
@@ -15,9 +14,6 @@ public class PassengerController {
 
     public PassengerController(PassengerService myService){
         this.myService = myService;
-    }
-    public static void main(String[] args) {
-        SpringApplication.run(PassengerApplication.class, args);
     }
 
     @GetMapping
